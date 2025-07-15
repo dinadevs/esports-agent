@@ -71,3 +71,41 @@ section p {
   color: #A1A1AA;
 }
 
+form {
+  display: flex;
+  gap: 0.85rem;
+  margin: 1.25rem;
+  flex-wrap: wrap;
+}
+
+input, select {
+  all: unset;
+  border: 2px solid #9147FF88;
+  border-radius: 0.5rem;
+  padding: 0.675rem;
+  font-size: 0.875rem;
+  background-color: #12121466;
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  background-image: linear-gradient(254deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  padding: 0.675rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+
+  transform: all 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
