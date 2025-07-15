@@ -22,20 +22,20 @@
         <div>
           <h2>Goal Assistant</h2>
           <p>Ask about strategies, builds and game tips!</p>
-          <form>
-            <input type="password" placeholder="Provide the Gemini API KEY.">
-            <select name="" id="">
+          <form id="form">
+            <input id="apiKey" type="password" placeholder="Provide the Gemini API KEY.">
+            <select name="" id="gameSelect">
               <option value="">Select a game</option>
               <option value="valorant">Valorant</option>
               <option value="lol">League of Legends</option>
               <option value="csgo">CS:GO</option>
             </select>
-            <input type="text" placeholder="Enter your question here" required>
-            <button>
+            <input id="questionInput" type="text" placeholder="Enter your question here" required>
+            <button id="askButton">
               Ask
             </button>
           </form>
-          <div id="ai-response">
+          <div id="aiResponse">
             <div class="response-content">
 
             </div>
@@ -43,5 +43,6 @@
         </div>
       </section>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
