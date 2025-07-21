@@ -23,12 +23,8 @@ Web application that uses the **Gemini** API (Google's AI) to answer questions a
 ## 💡 Applied Concepts
 
 - DOM and event manipulation
-- HTTP `fetch` requests
+- HTTP POST request with JS `fetch`
 - Prompt engineering with rules and context
 - Markdown to HTML
-
-
-
-
-
-
+- Animation with CSS
+- HTML form management

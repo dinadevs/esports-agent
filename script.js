@@ -159,6 +159,7 @@ const submitForm = async (event) => {
     aiResponseDiv.classList.remove('hidden')
   } catch (error) {
     console.log("Error: ", error);
+    alert('Error requesting AI. Please try again later.')
   } finally {
     askButton.disabled = false;
     askButton.textContent = "Ask";

@@ -7,15 +7,15 @@
 :root {
   font-family: "inter", sans-serif;
   line-height: 160%;
+
+  --gradient-colors: #9572FC 0%, #43E7AD 50%, #E2D45C 100%;
+  --dark-bg: #121214;
+  --white-color: #ffffff;
 }
 
 body {
-  background-image: url("./assets/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: top center;
-  background-color: #121214;
-  color: aliceblue;
+  background: var(--dark-bg) url("./assets/bg.jpg") no-repeat top center / 100% auto;
+  color: var(--white-color);
 }
 
 header {
@@ -34,7 +34,7 @@ main {
 }
 
 section {
-  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  background-image: linear-gradient(90deg, var(--gradient-colors));
   border-radius: 0.625rem;
   padding-top: .25rem;
 }
@@ -44,22 +44,6 @@ section > div {
   padding-top: 1.5rem;
   border-radius: 0.5rem;
   background-color: #2A2634;
-}
-/*animations*/
-main section {
-  opacity: 0;
-  transform: translateY(2rem);
-
-  animation-name: appear;
-  animation-duration: 700ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes appear {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 section h2 {
@@ -74,7 +58,7 @@ section p {
 form {
   display: flex;
   gap: 0.85rem;
-  margin: 1.25rem;
+  margin: 1.25rem 0;
   flex-wrap: wrap;
 }
 
@@ -84,7 +68,7 @@ input, select {
   border-radius: 0.5rem;
   padding: 0.675rem;
   font-size: 0.875rem;
-  background-color: #12121466;
+  background-color: var(--dark-bg);
 }
 
 input {
@@ -94,7 +78,7 @@ input {
 button {
   width: 100%;
   border: 0;
-  background-image: linear-gradient(245deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  background-image: linear-gradient(245deg, var(--gradient-colors));
   padding: 0.675rem;
   border-radius: 0.5rem;
   font-weight: bold;
@@ -110,11 +94,48 @@ button:hover {
   box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
 }
 
+#aiResponse {
+    background: #00000066;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-left: 4px solid #43E7AD;
+}
+
+#aiResponse ul {
+    padding-left: 1.5rem;
+    opacity: 0.8;
+}
+
+#aiResponse p {
+    color: var(--white-color);
+}
+
 button:disabled {
-  color:#121214;
+  color: var(--dark-bg);
   transform: initial;
   box-shadow: initial;
   cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+
+/*animations*/
+main section {
+  opacity: 0;
+  transform: translateY(2rem);
+
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .loading {
